@@ -1,0 +1,28 @@
+name: Add Numbers (script Based)
+
+on:
+  workflow_dispatch: 
+    input:
+      num1:
+        required: true
+      num2:
+        required: true
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run add script
+       run: 
+         chmod +x scripts/bash/add.sh
+         scripts/bash/add.sh \
+           ${{ github.event.inputs.num1 }} \
+           ${{ github.event.inputs.num2 }} 
+
+      
+        
+    
