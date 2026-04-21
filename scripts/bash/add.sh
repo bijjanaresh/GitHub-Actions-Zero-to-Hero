@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#This is for practice
 NUM=$1
 NUM=$2
 
